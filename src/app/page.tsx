@@ -1,101 +1,130 @@
-import Image from "next/image";
+// pages/index.tsx
+
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div>
+        <Head>
+          <title>My AI Hardware Service</title>
+          <meta name="description" content="High-end AI computers for privacy-sensitive markets" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        {/* Hero Section */}
+        <header className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-600 via-pink-500 to-orange-500 text-white">
+          <div className="text-center max-w-3xl mx-auto px-4">
+            <h1 className="text-5xl md:text-7xl font-bold mb-4">
+              Neural Edge
+            </h1>
+            <p className="text-xl md:text-2xl mb-8">
+              Private on-site AI deployment with world‐class support
+            </p>
+            <div>
+              <a
+                  href="#plans"
+                  className="inline-block bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
+              >
+                View Plans
+              </a>
+            </div>
+          </div>
+        </header>
+
+        {/* Features / Offering Section */}
+        <section id="features" className="py-16 bg-black text-white">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12">What We Offer</h2>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h3 className="text-2xl font-semibold mb-4">Powerful AI Machines</h3>
+                <p className="mb-4">
+                  We provide high‐performance AI computers installed right on your premises,
+                  ensuring your data never leaves your network.
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Top-tier GPUs for intensive AI workloads</li>
+                  <li>Custom configurations tailored to your needs</li>
+                  <li>Scalable for model training and inference</li>
+                </ul>
+              </div>
+              <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h3 className="text-2xl font-semibold mb-4">On‐Site Support & Maintenance</h3>
+                <p className="mb-4">
+                  Our expert team handles installation and troubleshooting. We’ll keep your
+                  local AI systems running optimally.
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Hands‐on setup for seamless integration</li>
+                  <li>Regular updates and monitoring</li>
+                  <li>24/7 support for mission‐critical tasks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Plans / CTA Section */}
+        <section id="plans" className="py-16 bg-gradient-to-b from-gray-900 to-black text-white">
+          <div className="max-w-5xl mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12">Plans & Pricing</h2>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h3 className="text-2xl font-semibold mb-2">Starter</h3>
+                <p className="mb-6">
+                  Ideal for small businesses or dev teams wanting a turnkey local AI environment.
+                </p>
+                <ul className="list-disc list-inside space-y-2 mb-6">
+                  <li>Single AI workstation</li>
+                  <li>Basic on‐site support</li>
+                  <li>Hardware upgrades available</li>
+                </ul>
+                <a
+                    href="#contact"
+                    className="block text-center bg-pink-500 hover:bg-pink-400 text-white py-3 px-6 rounded-md font-semibold"
+                >
+                  Get Starter
+                </a>
+              </div>
+
+              <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
+                <h3 className="text-2xl font-semibold mb-2">Enterprise</h3>
+                <p className="mb-6">
+                  Built for large data science teams or mission-critical workloads requiring
+                  high availability and in-depth support.
+                </p>
+                <ul className="list-disc list-inside space-y-2 mb-6">
+                  <li>Cluster of AI servers</li>
+                  <li>Priority on‐site support</li>
+                  <li>Full hardware maintenance & monitoring</li>
+                </ul>
+                <a
+                    href="#contact"
+                    className="block text-center bg-purple-500 hover:bg-purple-400 text-white py-3 px-6 rounded-md font-semibold"
+                >
+                  Contact Sales
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact or Footer */}
+        <footer id="contact" className="py-8 bg-gray-900 text-gray-300">
+          <div className="max-w-5xl mx-auto px-4 text-center">
+            <h3 className="text-xl font-semibold mb-4">Ready to talk?</h3>
+            <p className="mb-6">Let’s discuss how we can bring on‐site AI to your business.</p>
+            <a
+                href="mailto:info@neuraledge.nl"
+                className="inline-block bg-pink-600 hover:bg-pink-500 text-white px-6 py-3 rounded-full font-semibold"
+            >
+              info@neuraledge.nl
+            </a>
+          </div>
+          <div className="text-center mt-8">
+            <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Neural Edge</p>
+          </div>
+        </footer>
+      </div>
   );
 }
