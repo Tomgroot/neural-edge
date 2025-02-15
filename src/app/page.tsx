@@ -1,9 +1,7 @@
 // pages/index.tsx
 
 import Iridescence from "@/components/Iridescence/Iridescence";
-import GradientText from "@/components/GradientText/GradientText";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
+import ContactForm from "@/app/contact";
 
 export default function Home() {
   return (
@@ -124,25 +122,7 @@ export default function Home() {
           <h3 className="text-2xl font-semibold mb-4">Ready to talk?</h3>
           <p className="mb-6">Let’s discuss how we can bring on‐site AI to your business.</p>
           <div className="flex justify-center w-full flex-col items-center">
-            <div className="w-full max-w-sm flex flex-col gap-3">
-              <div className="flex items-start flex-col gap-1.5">
-                <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" placeholder=""/>
-              </div>
-              <div className="flex items-start flex-col gap-1.5">
-                <Label htmlFor="phone">Phone (optional)</Label>
-                <Input type="phone" id="phone" placeholder=""/>
-              </div>
-
-              <GradientText
-                  colors={["#40ffaa", "#4079ff", "#40ffaa", "#4079ff", "#40ffaa"]}
-                  animationSpeed={10}
-                  showBorder={true}
-                  className="px-6 py-3"
-              >
-                Send details
-              </GradientText>
-            </div>
+            <ContactForm />
           </div>
         </div>
 
