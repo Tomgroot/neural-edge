@@ -9,9 +9,12 @@ export default function Home() {
         {/* Hero Section */}
         <header className="relative min-h-screen flex items-center justify-center bg-gradient-to-br text-white bg-black">
           <div className="text-center max-w-3xl mx-auto px-4 z-10">
-            <h1 className="text-5xl md:text-7xl font-bold mb-4">
-              Neural Edge
-            </h1>
+            <div className="flex items-center mb-4 gap-6">
+              <img src="/neural-edge.svg" alt="Neural Edge" className="w-16" />
+              <h1 className="text-5xl md:text-7xl font-black">
+                Neural Edge
+              </h1>
+            </div>
             <p className="text-xl md:text-2xl mb-8">
               Private on-site AI with personal support
             </p>

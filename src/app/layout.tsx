@@ -19,6 +19,7 @@ export default function RootLayout({
       <link
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
           rel="stylesheet"/>
+      <link rel="icon" href="/neural-edge-icon.png" sizes="any" />
     </head>
     <body
         className="font-dm-sans antialiased dark"
