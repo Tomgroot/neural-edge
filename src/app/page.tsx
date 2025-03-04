@@ -10,7 +10,7 @@ export default function Home() {
         <header className="relative min-h-screen flex items-center justify-center bg-gradient-to-br text-white bg-black">
           <div className="text-center max-w-3xl mx-auto px-4 z-10">
             <div className="flex items-center mb-4 gap-6">
-              <img src="/neural-edge.svg" alt="Neural Edge" className="w-16" />
+              <img src="/neural-edge.svg" alt="Neural Edge" className="w-14" />
               <h1 className="text-5xl md:text-7xl font-black">
                 Neural Edge
               </h1>
@@ -44,7 +44,7 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-center mb-12 text-foreground">What We Offer</h2>
             <div className="grid gap-8 md:grid-cols-2">
               <div className="bg-gray-800 rounded-lg p-8 shadow-lg">
-                <h3 className="text-2xl font-semibold mb-4">Powerful AI run from your office</h3>
+                <h3 className="text-2xl font-semibold mb-4">AI machine at your office</h3>
                 <p className="mb-4">
                   We provide high‐performance AI computers installed right on your premises,
                   ensuring your data never leaves your network.
@@ -87,6 +87,9 @@ export default function Home() {
                 <ul className="list-disc list-inside space-y-2 mb-10">
                   <li>Pre-installed with AI models of your choice</li>
                   <li>Plug-and-play</li>
+                  <li>GTX 3090</li>
+                  <li>256 GB ram</li>
+                  <li>1 TB SSD</li>
                 </ul>
                 <div className="flex-1 flex items-start gap-3 flex-col justify-end">
                   <p>
@@ -118,6 +121,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <img src="/ram-sticks.png" alt="AI machine" className="w-full max-h-60 object-cover mt-8 rounded-md" />
           </div>
         </section>
 
@@ -134,6 +138,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <p><a href="mailto:info@neuraledge.nl" className="underline">info@neuraledge.nl</a> - Eindhoven, The Netherlands</p>
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Neural Edge</p>
+            <a href="https://linkedin.com/company/neural-edge" target="_blank"><img src="/linked-in.png" className="w-8 inline-block mt-4" alt="LinkedIn" /></a>
           </div>
         </footer>
       </div>
