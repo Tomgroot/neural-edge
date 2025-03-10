@@ -16,7 +16,7 @@ export default function ContactForm() {
         email: z.string().min(2, {
             message: "Email should be filled in.",
         }).max(50),
-        phone: z.string().max(50),
+        phone: z.string().max(50).optional(),
     })
 
     const [success, setSuccess] = useState(false)
@@ -26,7 +26,7 @@ export default function ContactForm() {
         resolver: zodResolver(formSchema),
         defaultValues: {
             email: "",
-            phone: "",
+            phone: undefined,
         },
     })
 
