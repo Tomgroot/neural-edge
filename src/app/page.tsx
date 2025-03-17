@@ -2,10 +2,13 @@
 
 import Iridescence from "@/components/Iridescence/Iridescence";
 import ContactForm from "@/app/contact";
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 export default function Home() {
   return (
       <div>
+        <Navbar></Navbar>
         {/* Hero Section */}
         <header className="relative min-h-screen flex items-center justify-center bg-gradient-to-br text-white bg-black">
           <div className="text-center max-w-3xl mx-auto px-4 z-10">
@@ -15,16 +18,16 @@ export default function Home() {
                 Neural Edge
               </h1>
             </div>
-            <p className="text-xl md:text-2xl mb-8">
+            <h2 className="text-xl md:text-2xl mb-8">
               Private on-site AI with personal support
-            </p>
+            </h2>
             <div>
-              <a
+              <Link
                   href="#plans"
                   className="inline-block bg-white text-gray-900 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform"
               >
                 View Plans
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -61,9 +64,8 @@ export default function Home() {
                   The machine is set up with the AI models you need, ready to be used on your local network.
                 </p>
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Deepseek</li>
-                  <li>Models aware of your business context</li>
-                  <li>PDF reading</li>
+                  <li>Models tuned to your business context</li>
+                  <li>PDF analysis</li>
                   <li>Image generation</li>
                   <li className="text-gray-500">and much more possible...</li>
                 </ul>
@@ -85,39 +87,37 @@ export default function Home() {
                   and ready to be used on your local business network.
                 </p>
                 <ul className="list-disc list-inside space-y-2 mb-10">
-                  <li>Pre-installed with AI models of your choice</li>
+                  <li>Pre-installed with AI tools of your choice</li>
                   <li>Plug-and-play</li>
-                  <li>GTX 3090</li>
-                  <li>256 GB ram</li>
-                  <li>1 TB SSD</li>
+                  <li>GTX 3090, 256 GB RAM, 1TB SSD</li>
                 </ul>
                 <div className="flex-1 flex items-start gap-3 flex-col justify-end">
                   <p>
                     €2999,-
                   </p>
-                  <a href="#contact" className="shiny-button">
+                  <Link href="#contact" className="shiny-button">
                     Order AI machine
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="bg-gray-800 rounded-lg p-8 shadow-lg flex-col flex">
                 <h3 className="text-2xl font-semibold mb-2">Active support</h3>
                 <p className="mb-6">
-                  Ideal for businesses wanting a turnkey local AI environment.
+                  Ideal for businesses wanting a local AI environment setup to your needs.
                 </p>
                 <ul className="list-disc list-inside space-y-2 mb-10">
                   <li>AI workstation installed on premise</li>
-                  <li>On‐site support</li>
-                  <li>Active AI upgrades</li>
+                  <li>Changing AI tools on demand</li>
+                  <li>Automatic updates to the newest technology</li>
                 </ul>
                 <div className="flex-1 flex items-start gap-3 flex-col justify-end">
                   <p>
                     €150 <span className="text-xs">/ month</span>
                   </p>
-                  <a href="#contact" className="shiny-button">
+                  <Link href="#contact" className="shiny-button">
                     Local AI with support
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -136,9 +136,9 @@ export default function Home() {
         {/* Contact or Footer */}
         <footer id="contact" className="py-8 text-gray-300">
           <div className="text-center mt-8">
-            <p><a href="mailto:info@neuraledge.nl" className="underline">info@neuraledge.nl</a> - Eindhoven, The Netherlands</p>
+            <p><Link href="mailto:info@neuraledge.nl" className="underline">info@neuraledge.nl</Link> - Eindhoven, The Netherlands</p>
             <p className="text-sm text-gray-500">&copy; {new Date().getFullYear()} Neural Edge</p>
-            <a href="https://linkedin.com/company/neural-edge" target="_blank"><img src="/linked-in.png" className="w-8 inline-block mt-4" alt="LinkedIn" /></a>
+            <Link href="https://linkedin.com/company/neural-edge" target="_blank"><img src="/linked-in.png" className="w-8 inline-block mt-4" alt="LinkedIn" /></Link>
           </div>
         </footer>
       </div>

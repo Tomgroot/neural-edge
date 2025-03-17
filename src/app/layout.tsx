@@ -1,10 +1,18 @@
 import type {Metadata} from "next";
 import "./globals.css";
+import { DM_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Neural Edge",
-  description: "Private on-site AI deployment with personal support",
+  title: "Neural Edge: On-Premise Local AI Machines made in Eindhoven",
+  description: "Secure your data with Neural Edge's on-site AI machines. Tailored AI tools, top-tier hardware," +
+      "and local support in Eindhoven. Explore our customizable plans starting at €150 per month.",
 };
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export default function RootLayout({
   children,
@@ -16,14 +24,9 @@ export default function RootLayout({
     <head>
       <link rel="preconnect" href="https://fonts.googleapis.com"/>
       <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-          rel="stylesheet"/>
       <link rel="icon" href="/neural-edge-icon.png" sizes="any" />
     </head>
-    <body
-        className="font-dm-sans antialiased dark"
-    >
+    <body className={`${dmSans.className} antialiased dark`}>
     {children}
     </body>
     </html>

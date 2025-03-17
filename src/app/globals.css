@@ -33,6 +33,10 @@
   --ring: 216 34% 17%;
 
   --radius: 0.5rem;
+
+  --blue: rgb(37 92 127);
+  --green: rgb(56 128 123);
+  --purple: rgb(64 70 114);
 }
 
 body {
